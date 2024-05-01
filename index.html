@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">CodeWithDevis</a>
+
+            <div class="nav__toggle" id="nav__toggle">
+                <i class="bx bx-menu"></i>
+            </div>
+
+            <div class="nav__menu" id="nav__menu">
+                <div class="nav__close" id="nav__close">
+                    <i class="bx bx-x"></i>
+                </div>
+
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const navToggle = document.querySelector('#nav__toggle');
+        const navClose = document.querySelector('#nav__close');
+        const navMenu = document.querySelector('#nav__menu');
+
+        navToggle.addEventListener('click', function(){
+            navMenu.classList.add('show');
+        })
+
+        navClose.addEventListener('click', function(){
+            navMenu.classList.remove('show');
+        })
+    </script>
+</body>
+</html> 
